@@ -3,6 +3,50 @@
 body{
     width:400,700;
 }
+header{
+    position:sticky;
+    display: inline;
+    z-index: 2;
+    width: 100%;
+    padding: 1rem 10rem;
+    .menu-btn{visibility: hidden;}
+    .nav{
+        position: relative;
+    ul{
+        list-style-type: none;
+        .menu-nav_link{
+            padding-right: 2.7rem;
+            text-decoration: none;
+            color: $Neutral-color3;
+            font-size: 20px;
+        }
+    .go_right{
+        padding-left: 20rem;
+        .menu-nav_link{
+        padding-right: 1rem;
+    }
+        .menu-nav_btn{
+            padding: 15px 30px;
+            font-size: 20px;
+            text-align: center;
+            cursor: pointer;
+            outline: none;
+            color: #fff;
+            background-color:$Primary-color1;
+            border: none;
+            border-radius: 30px;
+            margin-top: 35px;
+        }
+    }
+
+    .picheader{
+        padding-top: 20px;
+        padding-left: 10rem;
+        padding-right: 5rem;
+    }
+}
+}
+}
 .home{
     padding-top: 50px;
 .part-one{
@@ -69,6 +113,49 @@ body{
     padding-bottom: 10rem;
     margin-top:155px ;
     background-color: $Neutral-color1;
+    .addnew{
+        background-color: #fff;
+        position: absolute;
+        width: 1100px;
+        height: 70px;
+        padding: 20px 20px;
+        border-radius: 10px;
+        margin-top: 130px;
+        .parg1{
+            font-size: 20px;
+            margin-left:10px;
+        }
+        .parg2{
+            font-size: 20px;
+            margin-left:550px;
+            color:$Primary-color1;
+        }
+        .copy{
+        padding: 5px 20px;
+        font-size: 20px;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        color: #fff;
+        background-color:$Primary-color1;
+        border: none;
+        border-radius: 10px;
+        margin-left:10px;
+        }
+        .copied{
+        padding: 5px 20px;
+        font-size: 20px;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        color: #fff;
+        background-color:$Neutral-color3;
+        border: none;
+        border-radius: 10px;
+        margin-left:10px;
+        }
+    }
+
     .up_part{
     padding-top:250px ;
     margin-left: 230px;
@@ -88,6 +175,22 @@ body{
     column-count: 3;
     column-gap: 1px;
     font-size: 18px;
+    .new1{
+        border-top:0.5em solid $Primary-color1;
+        left: 47.46rem;
+        width: 95px;
+        position: relative;
+        top:10rem;
+        border-radius: 10px;
+    }
+    .new2{
+        border-top:0.5em solid $Primary-color1;
+        left: 20.8rem;
+        width: 95px;
+        position: relative;
+        top:9.5rem;
+        border-radius: 10px;
+    }
     .raond_img1{
         background-color: $Neutral-color3;
         position: absolute;
@@ -103,8 +206,8 @@ body{
     }
     .box1{
         background-color:white;
-        width: 350px;
-        height:220px;
+        width: 330px;
+        height:250px;
         padding:50px 20px;
         margin-top:30px;
         border-radius: 4%;
@@ -130,13 +233,18 @@ body{
     }
     .box2{
         background-color:white;
-        width: 350px;
-        height:220px;
+        width: 330px;
+        height:250px;
         padding:50px 20px;
         margin-top:60px;
         border-radius: 4%;
         text-align:left;
         float:left;
+        h4{
+            font-size: 20px;
+            margin-bottom: 15px;
+            margin-top: 20px;
+        }
     }
     .raond_img3{
         background-color: $Neutral-color3;
@@ -153,16 +261,68 @@ body{
     }
     .box3{
         background-color:white;
-        width: 350px;
-        height:220px;
+        width: 330px;
+        height:250px;
         padding:50px 20px;
         margin-top:90px;
         border-radius: 4%;
         text-align:left;
         float:left;
-        
+        h4{
+            font-size: 20px;
+            margin-bottom: 15px;
+            margin-top: 20px;
+        }
 
     }
 }
 }
+.part-four{
+    text-align: center;
+    height: 250px;
+    background-image: url('../img/bg-boost-desktop.svg');
+    background-color: $Primary-color2;
+h3{
+    padding-top: 60px;
+    padding-bottom: 30px;
+    font-size: 45px;
+    color: white;
 }
+.part-four__btn{
+    padding: 20px 30px;
+    font-size: 23px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color:$Primary-color1;
+    border: none;
+    border-radius: 30px;
+    margin-left:20px;
+}
+}
+}
+.foo{
+    background-color: $Neutral-color4;
+    column-count: 5;
+    color:#fff;
+    height: 280px;
+    padding-top: 30px;
+    padding-left: 50px;
+        .icon-logo{
+            padding: 10px;
+            filter: invert(255%) sepia(255%) saturate(255%) hue-rotate(346deg) brightness(255%) contrast(97%);
+
+}
+.div{
+    height: 400px;
+    width: 50px;
+    .b{
+        padding: 100px;
+    }
+    ul{
+        list-style-type:none;
+    }
+}
+}
+

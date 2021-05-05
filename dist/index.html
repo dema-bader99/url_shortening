@@ -10,19 +10,18 @@
 <body>
 <header>
     <div class="menu-btn">
+        <img src="./img/logo.svg" alt="logo pic" class="picheader"/>
         <span class="menu-btn__in"></span>
     </div>
     <nav class="nav">
         <ul class="menu-nav">
             <li class="menu-nav__item">
-                <img src="./img/logo.svg" alt="logo pic"/>
+                <img src="./img/logo.svg" alt="logo pic" class="picheader"/>
                 <a href="" class="menu-nav_link">Features</a>
                 <a href="" class="menu-nav_link">Pricing</a>
                 <a href="" class="menu-nav_link">Resources</a>
-            </li>
-            <li class="menu-nav__item">
-                <a href="" class="menu-nav_link">Login</a>
-                <button class="menu-nav_btn">Sign Up</button>
+             <span class="go_right">   <a href="" class="menu-nav_link">Login</a>
+                <button class="menu-nav_btn">Sign Up</button></span>
             </li>
 
         </ul>
@@ -41,10 +40,12 @@
             </div>
         </div>
         <div class="part-two">
-            <input type="text" class="shorten" placeholder="Shorten a link here..."/>
-            <button class="part-two__btn"><b>Shorten It!</b></button>
+            <input id="text_sh" type="text" class="shorten" placeholder="Shorten a link here..."/>
+            <button class="part-two__btn" onclick="shorturl()"><b>Shorten It!</b></button>
+            <p id='nothing_in'></p>
         </div>
         <div class="part-three">
+            <div id="addch"></div>
             <div class="up_part">
             <p class="headp3"><b>Advanced Statistics</b></p>
             <p class="supp3">Track how your links are preforming acrross the web with our advanced statistics dashboard.</p>
@@ -52,6 +53,8 @@
             <div class="down_part">
                 <div class="raond_img1"> <img src="./img/icon-brand-recognition.svg" alt="icon-brand-recognition pic" class="pic_box"/>
                 </div>
+                <hr class="new1">
+                <hr class="new2">
                 <div class="box1">
                   <h4>Brand Recognition</h4>
                     <p>boost your brand recognition with each cilck. Generic links don't mean a thing.Branded links help instil confidence in your content.</p>
@@ -76,28 +79,30 @@
         </div>
     </section>
 </main>
-<footer>
-    <img src="./img/logo.svg" alt="logo pic"/>
-    Features
-    <ul>
+<footer class="foo">
+  <div>  <object type="image/svg+xml" data="./img/logo.svg" class="icon-logo">
+        logo
+      </object></div>
+      <div>
+        <b class="b"> Features</b>
+        <ul>
         <li>Link Shortening</li>
         <li>Branded Links</li>
-        <li>Analylics</li>
-    </ul>
-    Resources
-    <ul>
+        <li>Analylics</li></ul></div>
+<div>
+    <b class="b">Resources</b>
+        <ul>
         <li>Blog</li>
         <li>Developers</li>
-        <li>Support</li>
-    </ul>
-    Company
-    <ul>
-        <li>About</li>
-        <li>Our Team </li>
-        <li>Careers</li>
-        <li>Contact</li>
-    </ul>
-    <div class="social_icons">
+        <li>Support</li></ul></div>
+<div>
+    <b class="b">Company</b>
+        <ul>
+            <li>About</li>
+            <li>Our Team </li>
+            <li>Careers</li>
+            <li>Contact</li></ul></div>
+<div>
         <a href="#!">
             <i><img src="./img/icon-facebook.svg" alt="icon-facebook"/></i>
         </a>
@@ -109,8 +114,44 @@
         </a>
         <a href="#!">
             <i><img src="./img/icon-instagram.svg" alt="icon-instagram"/></i>
-        </a>
-    </div>
+        </a></div>
+<!--<div class="mobile">
+    <object type="image/svg+xml" data="./img/logo.svg" class="icon-logo">
+                Bike
+              </object>
+              <div>
+            Features
+                <ul>
+                <li>Link Shortening</li>
+                <li>Branded Links</li>
+                <li>Analylics</li></ul></div>
+<div>
+            Resources
+                <ul>
+                <li>Blog</li>
+                <li>Developers</li>
+                <li>Support</li></ul></div>
+    <div>
+                Company
+                <ul>
+                    <li>About</li>
+                    <li>Our Team </li>
+                    <li>Careers</li>
+                    <li>Contact</li></ul></div>
+<div>
+                <a href="#!">
+                    <i><img src="./img/icon-facebook.svg" alt="icon-facebook"/></i>
+                </a>
+                <a href="#!">
+                    <i><img src="./img/icon-twitter.svg" alt="icon-twitter"/></i>
+                </a>
+                <a href="#!">
+                    <i><img src="./img/icon-pinterest.svg" alt="icon-pinterest"/></i>
+                </a>
+                <a href="#!">
+                    <i><img src="./img/icon-instagram.svg" alt="icon-instagram"/></i>
+                </a></div>
+</div>-->
 </footer>
 </body>
 </html>
