@@ -1,3 +1,4 @@
+
 function getrandom() {
     var text = "";
     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789/._-";
@@ -63,4 +64,30 @@ function coppy(){
   /* Alert the copied text */
   copybutton.innerText="copied!";
   copybutton.className="copied";
+}
+
+let menuBtn = document.querySelector('.menu-btn');
+let menuin = document.querySelector(".menu-btn__in");
+let nav = document.querySelector('.nav');
+let menuNav = document.querySelector('.menu-nav');
+let navItem =document.querySelector('.menu-nav__item');
+let showMenu = false;
+
+menuBtn.addEventListener('click',toggleMenu);
+
+function toggleMenu(){
+    if(!showMenu){
+        menuin.classList.add('open');
+        nav.classList.add('open');
+        menuNav.classList.add('open');
+        navItem.forEach(item => item.classList.add('open'));
+        showMenu =true;
+    }
+    else{
+        menuin.classList.remove('open');
+        nav.classList.remove('open');
+        menuNav.classList.remove('open');
+        navItem.forEach(item => item.classList.remove('open'));
+        showMenu =false;
+    }
 }
