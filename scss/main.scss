@@ -13,7 +13,7 @@ header{
     .menu-btn{visibility: hidden;}
     .nav{
         position: relative;
-    ul{
+    .menu-nav{
         list-style-type: none;
         .menu-nav_link{
             padding-right: 2.7rem;
@@ -52,7 +52,9 @@ header{
     padding-top: 50px;
 .part-one{
     padding-left: 10rem;
-    column-count:2;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
     .first_col{
         margin-top: 100px;
         .headp{
@@ -113,22 +115,30 @@ header{
     padding-left: 10rem;
     padding-bottom: 10rem;
     margin-top:155px ;
+
     background-color: $Neutral-color1;
+    .addch{
+        padding-top: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
     .addnew{
+        display:inline-flex;
+        justify-content: space-between;
         background-color: #fff;
-        position: absolute;
         width: 1100px;
         height: 70px;
         padding: 20px 20px;
         border-radius: 10px;
-        margin-top: 130px;
+        position: relative;
+        margin-top: 30px;
         .parg1{
             font-size: 20px;
-            margin-left:10px;
         }
         .parg2{
             font-size: 20px;
-            margin-left:550px;
+            border: none;
             color:$Primary-color1;
         }
         .copy{
@@ -158,7 +168,7 @@ header{
     }
 
     .up_part{
-    padding-top:250px ;
+    padding-top:150px ;
     margin-left: 230px;
     margin-bottom: 50px;
     width: 600px;
@@ -289,51 +299,51 @@ h3{
 }
 .foo{
     background-color: $Neutral-color4;
-    column-count: 5;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
     color:#fff;
     height: 280px;
     padding-top: 30px;
     padding-left: 50px;
+    padding-right: 50px;
         .icon-logo{
-            padding: 10px;
             filter: invert(255%) sepia(255%) saturate(255%) hue-rotate(346deg) brightness(255%) contrast(97%);
 
 }
-.div{
-    height: 400px;
-    width: 50px;
-    .b{
-        padding: 100px;
-    }
+
     ul{
         list-style-type:none;
+        padding-top: 20px;
+        li{
+            padding: 10px;
+        }
     }
-}
+
 }
 @media screen and (max-width: 375px) {
     header{
+        display: inline-block;
+        padding: 1rem 1rem;
         .picheader2{
             visibility: visible;
-            padding: 10px;
-            margin-bottom: -3rem;
-            margin-left: -9rem;
+            padding: 0px;
+            top: 2rem;
         }
     .menu-btn{
         visibility:visible;
         position: absolute;
-        top: 1rem;
-        height: 20px;
+        top: 2rem;
+        z-index: 1;
+        margin-left: 19rem;
+        height: 30px;
         width: 28px;
         cursor: pointer;
-        @include tranition-ease;
         &__in{
             position: absolute;
-            left: 20rem;
-            top: 2rem;
             width: 28px;
             height: 3px;
             background: #000;
-            @include tranition-ease;
             &::before{
                 content: '';
                 position: absolute;
@@ -341,7 +351,6 @@ h3{
                 width: 28px;
                 height: 3px;
                 background-color: #000;
-                @include tranition-ease;
             }
             &::after{
                 content: '';
@@ -350,65 +359,90 @@ h3{
                 width: 28px;
                 height: 3px;
                 background-color: #000;
-                @include tranition-ease;
             }
             &.open{
                 transform: rotate(720deg);
                 background: transparent;
-
             }
         }
     }
     .nav{
-        position: sticky;
+        visibility: hidden;
+        position: absolute;
         top:0;
         left:0;
         width: 100vw;
         opacity: 0.98;
-        visibility: hidden;
         &.open{
             visibility:visible;
         }
         .menu-nav{
+            visibility: hidden;
             display: flex;
             flex-flow: column wrap;
             align-items: center;
             justify-content: center;
-            height: 10vh;
+            display: none;
+            margin-top: 5rem;
+            height: 55vh;
             overflow: hidden;
             background: $Neutral-color3;
             list-style-type: none;
             padding-right: 1rem;
             transform: translateY(-100%);
-            @include tranition-ease;
             &.open{
+                visibility: visible;
+                display: block;
                 transform: translateY(0);
             }
             &__item{
                 transform: translateX(100vw);
-                @include tranition-ease;
+                text-align: center;
                 &.open{
                     transform: translateX(0);
                 }
             }
-            &__link{
-                display: inline-block;
-                font-size: 2rem;
-                padding: 2rem 0;
-                font-weight: 300;
-                @include tranition-ease;
+            .picheader{
+                visibility: hidden;
             }
+
+            .menu-nav_link{
+                font-weight: bold;
+                color: white;
+                display: block;
+                font-size: 1.5rem;
+                padding: 1rem 1rem;
+            }
+            .go_right{
+                padding-left: 0rem;
+                padding-right: 0rem;
+                .menu-nav_btn{
+                    padding: 15px 100px;
+                    font-size: 22px;
+                    text-align: center;
+                    cursor: pointer;
+                    outline: none;
+                    color: #fff;
+                    background-color:$Primary-color1;
+                    border: none;
+                    border-radius: 30px;
+                    margin-top: 0px;
+                                }}
+
         }
 
     }
 }
     .home{
-        padding-top: 0px;
+        overflow: hidden;
     .part-one{
         padding-left: 0rem;
-        column-count:1;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
         .first_col{
             margin-top: 1px;
+            order: 2;
             .headp{
                 font-size: 50px;
                 text-align: center;
@@ -439,6 +473,7 @@ h3{
         }
         .working{
             width: 450px;
+            order: 1;
         }
     }
 
@@ -483,43 +518,46 @@ h3{
         margin-top:155px ;
         background-color: $Neutral-color1;
         .addnew{
+            display:flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: left;
             background-color: #fff;
-            position: absolute;
+            position: relative;
             width: 300px;
-            height: 100px;
-            padding: 20px 20px;
+            height: 120px;
+            padding: 20px 10px;
             border-radius: 10px;
-            margin-top: 200px;
+            margin-top: 30px;
             margin-left: 1rem;
             .parg1{
                 font-size: 15px;
-                margin-left:2px;
+                padding: 0px 15px;
             }
             .parg2{
-                width: 100px;
+                padding: 0px 15px;
+                border: none;
                 font-size: 15px;
-                margin-left:100px;
                 color:$Primary-color1;
             }
             .copy{
-            padding: 5px 20px;
+            padding: 5px 5px;
             font-size: 20px;
-            margin-top: 10px;
-            width: 200px;
+            width: 250px;
             text-align: center;
             cursor: pointer;
             outline: none;
             color: #fff;
             background-color:$Primary-color1;
-            border: none;
+            border:none;
             border-radius: 10px;
-            margin-left:10px;
+            margin-top: 5px;
             }
             .copied{
-            padding: 5px 20px;
+            padding: 5px 5px;
             font-size: 20px;
-            width: 200px;
-            margin-top: 10px;
+            width: 250px;
+            margin-top: 5px;
             text-align: center;
             cursor: pointer;
             outline: none;
@@ -527,12 +565,11 @@ h3{
             background-color:$Neutral-color3;
             border: none;
             border-radius: 10px;
-            margin-left:10px;
             }
         }
         .up_part{
         width: 350px;
-        padding-top:350px ;
+        padding-top:50px ;
         margin-left: 0px;
         margin-bottom: 50px;
         text-align: center;
@@ -683,20 +720,25 @@ h3{
     }
     .foo{
         background-color: $Neutral-color4;
-        column-count: 1;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
         color:#fff;
         text-align: center;
         height: auto;
         padding-top: 30px;
-        padding-left: 0px;
+        padding-bottom: 30px;
             .icon-logo{
-                padding: 10px;
+                padding-bottom: 20px;
                 filter: invert(255%) sepia(255%) saturate(255%) hue-rotate(346deg) brightness(255%) contrast(97%);
 
     }
     ul{
         list-style-type:none;
-
-
-}
+        padding-bottom: 20px;
+        padding-top: 10px;
+        li{
+            padding: 10px;
+        }
+    }
     }}

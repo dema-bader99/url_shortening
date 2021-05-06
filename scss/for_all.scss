@@ -10,5 +10,7 @@ $Neutral-color4:hsl(260, 8%, 14%);
     margin: 0;
     padding: 0;
 }
-@mixin tranition-ease {
-    transition: all 0.5s ease-in-out;}
+
+@mixin transition-ease {
+    transition: all 0.5s ease-in-out;
+  }
