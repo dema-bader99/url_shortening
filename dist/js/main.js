@@ -1,5 +1,3 @@
-
-
 window.addEventListener('DOMContentLoaded', (load) => {
 const menuBtn = document.querySelector('.menu-btn');
 const hamburger = document.querySelector('.menu-btn__in');
@@ -74,13 +72,12 @@ function adddiv(intext){
     makedivin.innerHTML=intext.value;
     let makeinput=document.createElement("input");
     makeinput.className="parg2";
-    makeinput.innerHTML="http://"+`${getrandom()}`;
+    makeinput.value="http://"+`${getrandom()}`;
     makeinput.setAttribute("id",`shlink${clickcount}`);
-    let makebutton=document.createElement("div");
+    let makebutton=document.createElement("button");
     makebutton.className="copy";
-    makebutton.setAttribute("id",`copyy${clickcount}`);
-    makebutton.setAttribute("onclick",function(){
-        coppy(`shlink${clickcount}`,`copyy${clickcount}`);});
+    makebutton.setAttribute("id",clickcount);
+    makebutton.onclick= function(){coppy(this);};
     makebutton.innerHTML="copy";
     makediv.appendChild(makedivin);
     makediv.appendChild(makeinput);
@@ -99,10 +96,11 @@ function adddiv(intext){
 
 
 
-function coppy(idname, btnId){
+function coppy(elem){
      /* Get the text field */
-  let copyText = document.getElementById(idname);
-  let copybutton = document.getElementById(btnId);
+  let ide=elem.id;
+  let copyText = document.getElementById(`shlink${ide}`);
+  let copybutton = document.getElementById(ide);
   /* Select the text field */
   copyText.select();
   copyText.setSelectionRange(0, 99999); /* For mobile devices */
@@ -113,6 +111,14 @@ function coppy(idname, btnId){
   /* Alert the copied text */
   copybutton.innerText="copied!";
   copybutton.className="copied";
+  for(let i=1;i<=clickcount;i++){
+    if(ide!=i){
+      let notcopybutton = document.getElementById(i);
+      notcopybutton.className="copy";
+      notcopybutton.innerText="copy";
+    }
+
+  }
 }
 document.querySelector('.part-two__btn').addEventListener("click",shorturl);
 
